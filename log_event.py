@@ -7,8 +7,7 @@ import sys
 def setup_cloudwatch_logger():
     # Initialize the logger
     logger = logging.getLogger(__name__)
-    #logger.setLevel(logging.INFO)  # Set to the desired logging level
-    logger.setLevel(logging.DEBUG)  # Set to the desired logging level
+    logger.setLevel(logging.INFO)  # Set to the desired logging level
 
     # AWS CloudWatch handler using watchtower
     cloudwatch_handler = watchtower.CloudWatchLogHandler(
@@ -30,7 +29,6 @@ def main():
     # Test log messages
     logger.info("This is an info log message.")
     logger.error("This is an error log message.")
-    #logger.debug("This is an debug log message - Traceback.")
 
     # Your application logic here
     for i in range(5):
